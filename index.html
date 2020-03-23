@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+    <title>哔哩哔哩av-bc转换器</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+<div class="card mt-2 ml-2 mr-2" style="max-width: 550px">
+    <div class="card-body">
+        <h5 class="card-title">哔哩哔哩av-bc转换器</h5>
+        <div class="form-group">
+            <label for="txt_in">输入</label>
+            <textarea id="txt_in" class="form-control" rows="6"></textarea>
+        </div>
+        <div class="form-group">
+            <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="cb_type">
+                <label class="custom-control-label" for="cb_type">AV号转BV</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <button id="btn_process" class="btn btn-block btn-success">转换</button>
+        </div>
+        <div id="alert_success" class="alert alert-success" role="alert">
+            Result: <a id="a_out" href="#" class="alert-link"></a>
+        </div>
+        <div id="alert_wrong" class="alert alert-danger" role="alert" style="display: none">
+            请输入正确的表达式
+        </div>
+    </div>
+</div>
+<script src="index.js"></script>
+</body>
+</html>
