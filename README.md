@@ -1,4 +1,4 @@
-# bibibili-av-bv-converter
+# bibibili av bv converter
 # 哔哩哔哩 AV号和BV号转换器
 
 算法来自知乎回答
