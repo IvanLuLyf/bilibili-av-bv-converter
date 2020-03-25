@@ -11,7 +11,7 @@
     for (let i = 0; i < magicStr.length; i++) table[magicStr[i]] = BigInt(i);
     let s = [11, 10, 3, 8, 4, 6, 2, 9, 5, 7];
     const XOR = 177451812n, ADD = 100618342136696320n;
-    console.log(XOR, ADD);
+
     document.getElementById('btn_process').addEventListener('click', _ => {
         try {
             if (cbType.checked) {
