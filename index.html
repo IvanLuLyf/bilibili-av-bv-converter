@@ -38,5 +38,40 @@
     </div>
 </div>
 <script src="index.js"></script>
+<script>
+    (function () {
+        let txtIn = document.getElementById('txt_in');
+        let aOut = document.getElementById('a_out');
+        let cbType = document.getElementById('cb_type');
+        let alertSuccess = document.getElementById('alert_success');
+        let alertWrong = document.getElementById('alert_wrong');
+
+        document.getElementById('btn_process').addEventListener('click', () => {
+            try {
+                if (cbType.checked) {
+                    let av = txtIn.value || '';
+                    let bv = bvUtil.encode(BigInt(av.replace('av', '')));
+                    aOut.innerText = bv;
+                    aOut.href = "https://www.bilibili.com/" + bv;
+                } else {
+                    let bv = txtIn.value || '';
+                    if (!bv.toLowerCase().startsWith('bv')) {
+                        alertSuccess.style.display = 'none';
+                        alertWrong.style.display = 'block';
+                        return;
+                    }
+                    let av = bvUtil.decode(bv);
+                    aOut.innerText = av;
+                    aOut.href = "https://www.bilibili.com/av" + av;
+                }
+                alertSuccess.style.display = 'block';
+                alertWrong.style.display = 'none';
+            } catch (e) {
+                alertSuccess.style.display = 'none';
+                alertWrong.style.display = 'block';
+            }
+        });
+    })();
+</script>
 </body>
 </html>
